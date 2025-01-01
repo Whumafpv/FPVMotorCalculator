@@ -1,2 +1,2 @@
-# WhumaFPV_MotorCalculator
+# FPVMotorCalculator
 Fpv Prop and motor voltage kv comparison tool.
