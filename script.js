@@ -43,7 +43,7 @@ function calculate() {
       <b>Search Results:</b> Motor Size: ${motorSize},KV: ${kv}, Voltage: ${voltage}V, Stator Volume: ${statorVolume.toFixed(2)} mm³, Prop Area: ${propArea.toFixed(2)} sq/in, RPM: ${rpm.toFixed(2)}
     </span>
     <span class="line">
-      Prop Tip Speed MPH: ${tipSpeedMPH.toFixed(2)}, Mach: ${machNumber.toFixed(2)}, V/A Ratio: ${volumeToAreaRatio.toFixed(2)} mm³/in²
+      Prop Tip Speed MPH: ${tipSpeedMPH.toFixed(2)}, Mach: ${machNumber.toFixed(2)}, Stator Volume to Prop Area Ratio: ${volumeToAreaRatio.toFixed(2)} mm³/in²
     </span>
   `;
   resultsDiv.prepend(newEntry);
@@ -54,4 +54,5 @@ function calculate() {
     entries[entries.length - 1].remove();
   }
 }
+
 
