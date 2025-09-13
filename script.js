@@ -32,7 +32,7 @@ function calculate() {
   //const motorSize = `${statorDiameter.toFixed(0)}${statorHeight < 10 ? '0' : ''}${statorHeight.toFixed(0)}`;
   
   // Motor size with one decimal place (D × H)
-  const motorSize = `${statorDiameter.toFixed(1)}×${statorHeight.toFixed(1)}`;
+  const motorSize = `${statorDiameter.toFixed(1)}mm X ${statorHeight.toFixed(1)}mm`;
   
   // Display results
   const resultsDiv = document.getElementById('log');
@@ -40,7 +40,7 @@ function calculate() {
   newEntry.classList.add('log-entry');
   newEntry.innerHTML = `
     <span class="line">
-      <b>Search Results:</b> Motor Size: ${motorSize},KV: ${kv}, Voltage: ${voltage}V, Stator Volume: ${statorVolume.toFixed(2)} mm³, Prop Area: ${propArea.toFixed(2)} sq/in, RPM: ${rpm.toFixed(2)}
+      <b>Search Results:</b> Motor Size: ${motorSize}, KV: ${kv}, Voltage: ${voltage}V, Stator Volume: ${statorVolume.toFixed(2)} mm³, Prop Area: ${propArea.toFixed(2)} sq/in, RPM: ${rpm.toFixed(2)}
     </span>
     <span class="line">
       Prop Tip Speed MPH: ${tipSpeedMPH.toFixed(2)}, Mach: ${machNumber.toFixed(2)}, Stator Volume to Prop Area Ratio: ${volumeToAreaRatio.toFixed(2)} mm³/in²
@@ -54,5 +54,6 @@ function calculate() {
     entries[entries.length - 1].remove();
   }
 }
+
 
 
