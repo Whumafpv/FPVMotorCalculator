@@ -29,15 +29,18 @@ function calculate() {
   const volumeToAreaRatio = statorVolume / propArea; // No need for conversion
 
   // Calculate motor size (stator diameter * stator height)
-  const motorSize = `${statorDiameter.toFixed(0)}${statorHeight < 10 ? '0' : ''}${statorHeight.toFixed(0)}`;
-
+  //const motorSize = `${statorDiameter.toFixed(0)}${statorHeight < 10 ? '0' : ''}${statorHeight.toFixed(0)}`;
+  
+  // Motor size with one decimal place (D × H)
+  const motorSize = `${statorDiameter.toFixed(1)}×${statorHeight.toFixed(1)}`;
+  
   // Display results
   const resultsDiv = document.getElementById('log');
   const newEntry = document.createElement('div');
   newEntry.classList.add('log-entry');
   newEntry.innerHTML = `
     <span class="line">
-      <b>Search Results:</b> Motor Size: ${motorSize},KV: ${kv}, Stator Volume: ${statorVolume.toFixed(2)} mm³, Prop Area: ${propArea.toFixed(2)} sq/in, RPM: ${rpm.toFixed(2)}
+      <b>Search Results:</b> Motor Size: ${motorSize},KV: ${kv}, Voltage: ${voltage}V, Stator Volume: ${statorVolume.toFixed(2)} mm³, Prop Area: ${propArea.toFixed(2)} sq/in, RPM: ${rpm.toFixed(2)}
     </span>
     <span class="line">
       Prop Tip Speed MPH: ${tipSpeedMPH.toFixed(2)}, Mach: ${machNumber.toFixed(2)}, V/A Ratio: ${volumeToAreaRatio.toFixed(2)} mm³/in²
@@ -51,3 +54,4 @@ function calculate() {
     entries[entries.length - 1].remove();
   }
 }
+
