@@ -34,6 +34,25 @@ body {
   height: 100vh;
 }
 
+.hero {
+  width: 100%;
+  padding: 12px 0 10px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-caption {
+  margin: 10px 24px 0 24px; /* left/right padding */
+  font-size: 14px;
+  opacity: 0.85;
+}
+
 .calculator {
   max-width: 400px;
   padding: 20px;
@@ -110,4 +129,5 @@ body {
     transform: translateY(0);
   }
 }
+
 
