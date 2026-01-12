@@ -4,6 +4,29 @@ body {
   padding: 0;
 }
 
+.site-header {
+  width: 100%;
+  padding: 16px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.site-header-inner {
+  padding: 0 24px;          /* left/right breathing room */
+  box-sizing: border-box;
+}
+
+.site-header h1 {
+  margin: 0 0 6px 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.site-header p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -87,3 +110,4 @@ body {
     transform: translateY(0);
   }
 }
+
